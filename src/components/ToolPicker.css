@@ -1,0 +1,54 @@
+.tool-picker{
+  position:fixed;
+  display:flex;
+  flex-direction:column;
+  gap:5px; 
+  background:#fff;
+  border-radius:50vw;
+  overflow:hidden;
+  box-shadow:1px 2px 5px#0006;
+  left:8px;
+  top:50%;
+  transform:translateY(-50%);
+  z-index:10;
+  width: 40px;
+  padding:5px;
+}
+
+.tool-picker::before{
+  content:"";
+  position:absolute;
+  left:5px;
+  bottom:5px;
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  background:#fa0;
+  transition:transform .2s;
+  pointer-events:none;
+  z-index:-1;
+}
+
+.tool-picker:has(#pen:checked)::before{
+  transform:translateY(0);
+}
+
+.tool-picker:has(#eraser:checked)::before{
+  transform:translateY(-45px);
+}
+
+.tool-picker:has(#fill:checked)::before{
+  transform:translateY(-90px);
+}
+
+.ToolRadioInput{display:none;}
+.ToolRadioInput+label{display:flex;width:40px;padding:0;transition:.2s;border-radius:50vw;}
+.ToolRadioInput+label svg{
+  margin:5px;
+  width:30px;
+  height:30px;
+  transition:.2s;
+  fill:none;stroke:#f90;
+  stroke-linecap:round;stroke-linejoin:round;stroke-width:2;
+}
+.ToolRadioInput:checked+label svg{stroke:#fff!important;}

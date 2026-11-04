@@ -1,0 +1,124 @@
+.artwork-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.page-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.new-button {
+  background: var(--main);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.search-row {
+  display: flex;
+  gap: 8px;
+  margin: 16px 0 20px;
+}
+
+.search-row input {
+  flex: 1;
+  max-width: 300px;
+  padding: 9px 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.search-row select {
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
+
+.artwork-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.artwork-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.thumb {
+  height: 160px;
+  background: #e6e7ef;
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.no-thumb {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray);
+  font-size: 13px;
+}
+
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+}
+
+.card-title {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.card-sub {
+  font-size: 12px;
+  color: var(--gray);
+  margin-top: 4px;
+}
+
+.more-button {
+  border: none;
+  background: none;
+  font-size: 18px;
+  color: var(--gray);
+  cursor: pointer;
+}
+
+.no-result {
+  text-align: center;
+  color: var(--gray);
+  margin-top: 60px;
+}
+
+/* 모바일 */
+@media (max-width: 768px) {
+  .artwork-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .thumb {
+    height: 120px;
+  }
+
+  .search-row input {
+    max-width: none;
+  }
+}
