@@ -11,7 +11,7 @@
 }
 
 .new-button {
-  background: var(--main);
+  background: var(--button-bg);
   color: white;
   border: none;
   padding: 10px 16px;
@@ -27,11 +27,12 @@
 }
 
 .search-row input {
+  background: var(--input-bg);
   flex: 1;
   max-width: 300px;
   padding: 9px 12px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
+  border: none;
+  border-radius: 50vh;
   font-size: 14px;
 }
 
@@ -52,7 +53,7 @@
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 1px 4px #4446;
 }
 
 .thumb {
@@ -106,13 +107,19 @@
   color: var(--gray);
   margin-top: 60px;
 }
-
 /* 모바일 */
-@media (max-width: 768px) {
+@media (width < 800px) {
   .artwork-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 10px;
   }
+  @media (width < 600px) {
+    .artwork-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+  }
+  
 
   .thumb {
     height: 120px;

@@ -23,7 +23,7 @@
   width:40px;
   height:40px;
   border-radius:50%;
-  background:#fa0;
+  background:var(--button-bg);
   transition:transform .2s;
   pointer-events:none;
   z-index:-1;

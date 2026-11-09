@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './ToolPicker.css'
 
-import Range from './Range'
+import Range from '../Range'
 
 const ToolRadio=({ value, tool, f, children })=>(
   <>

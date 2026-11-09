@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import ArtworkCard from './ArtworkCard'
+import ArtworkCard from '../components/ArtworkList/ArtworkCard'
+import NewArtworkMenu from '../components/ArtworkList/NewArtworkMenu'
 import { artworks } from '../data/dummyData'
 import './ArtworkList.css'
 
@@ -28,6 +29,8 @@ function ArtworkList() {
         </button>
       </div>
 
+      <NewArtworkMenu/>
+
       <div className="search-row">
         <input
           type="text"
@@ -35,7 +38,6 @@ function ArtworkList() {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
-        {/*정렬 기능 아직 연결 안 함 */}
         <select>
           <option>최근 수정순</option>
           <option>이름순</option>

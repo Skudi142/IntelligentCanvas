@@ -4,16 +4,19 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
 
-import ToolPicker from './components/ToolPicker'
-import ArtworkList from './components/ArtworkList'
+import ToolPicker from './components/DrawingSpace/ToolPicker'
+
+import ArtworkList from './page/ArtworkList'
+// import DrawingSpace from './page/DrawingSpace'
 
 export default function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      {/* <ArtworkList></ArtworkList> */}
-      <ToolPicker/>
+      <ArtworkList></ArtworkList>
+      {/* <DrawingSpace></DrawingSpace> */}
+      {/* <ToolPicker/> */}
     </>
   )
 }
