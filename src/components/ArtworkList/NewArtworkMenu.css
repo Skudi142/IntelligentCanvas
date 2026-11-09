@@ -16,6 +16,16 @@
   animation: .2s fade-out;
 }
 
+.new-button {
+  background: var(--button-bg);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
 .blide{
   position:fixed;
   background:#aaa5;
@@ -38,7 +48,7 @@
   background:#fff;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
   width: calc(100% - 64px);
   max-width: 420px;
   max-height: 90%;

@@ -24,12 +24,8 @@ function ArtworkList() {
     <div className="artwork-page">
       <div className="page-top">
         <h2>내 작품</h2>
-        <button className="new-button" onClick={handleNew}>
-          + 새 작품
-        </button>
+        <NewArtworkMenu />
       </div>
-
-      <NewArtworkMenu/>
 
       <div className="search-row">
         <input
