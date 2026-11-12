@@ -1,21 +1,3 @@
-@keyframes fade-in{
-  from{opacity:0;visibility:hidden;}
-  to{opacity:1;visibility:visible;}
-}
-@keyframes fade-out{
-  from{display:block;opacity:1;visibility:visible;}
-  to{opacity:0;visibility:hidden;display:none;}
-}
-
-.show{
-  display: block;
-  animation: .2s fade-in;
-}
-.hide{
-  display: none;
-  animation: .2s fade-out;
-}
-
 .new-button {
   background: var(--button-bg);
   color: white;
@@ -24,23 +6,6 @@
   border-radius: 8px;
   font-size: 14px;
   cursor: pointer;
-}
-
-.blide{
-  position:fixed;
-  background:#aaa5;
-  left:0;
-  top:0;
-  width:100%;
-  height:100%;
-  backdrop-filter: blur(3px);
-}
-.back{
-  position:fixed;
-  left:0;
-  top:0;
-  width:100%;
-  height:100%;
 }
 
 .new-artwork-menu{

@@ -1,0 +1,7 @@
+.openColorPicker{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  outline: 1px solid var(--line);
+  cursor: pointer;
+}

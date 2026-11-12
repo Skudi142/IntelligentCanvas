@@ -1,7 +1,9 @@
-import './NewArtworkMenu.css'
 import { useState } from 'react'
+import './NewArtworkMenu.css'
 
-function NewArtworkMenu() {
+import { Blind } from '../mainComponents'
+
+function NewArtworkMenu({f}) {
   const [hide, setHide] = useState(true)
 
   return(
@@ -9,11 +11,11 @@ function NewArtworkMenu() {
       <button className="new-button" onClick={() => setHide(false)}>
         + 새 작품
       </button>
-      <div
-        className={`blide ${hide ? 'hide' : 'show'}`}
+      <Blind 
+        hide={hide}
         onClick={() => setHide(true)}
       >
-        <div className="new-artwork-menu" onClick={(event) => event.stopPropagation()}>
+        <div className="new-artwork-menu">
           <h3>새 작품</h3>
           <main>
             <div className="items">
@@ -40,10 +42,10 @@ function NewArtworkMenu() {
           </main>
           <div className="contents">
             <button className="cancel" onClick={() => setHide(true)}>취소</button>
-            <button className="confirm">확인</button>
+            <button className="confirm" onClick={f}>확인</button>
           </div>
         </div>
-      </div>
+      </Blind>
     </>
   )
 }
